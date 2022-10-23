@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class complex
+{
+	public:
+		int real,image;
+		void input(){
+			cout<<"Enter real:";
+			cin>>real;
+			cout<<"Enter image:";
+			cin>>image;
+		}
+		void display(){
+			cout<<real<<"+"<<image<<"i";
+		}
+		complex operator+(complex p){
+			complex x;
+			x.real=real+p.real;
+			x.image=image+p.image;
+			return(x);
+		}
+};
+int main(){
+	complex c1,c2,c3;
+	c1.input();
+	c2.input();
+	c3=c1+c2;
+	c3.display();
+}
