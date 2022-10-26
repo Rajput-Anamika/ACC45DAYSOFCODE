@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class A
+{
+	public:
+		virtual void get_data()=0;
+		virtual void area()=0;
+		virtual void display()=0;
+};
+class Rect: public A
+{
+	public:
+		int l,b,a;
+		void get_data(){
+			cout<<"Enter length and breadth of rectangle";
+			cin>>l>>b;
+		}
+		void area(){
+			a=l*b;
+		}
+		void display(){
+			cout<<"Area of rectangle:"<<a;
+		}
+};
+int main()
+{
+	Rect o1;
+	o1.get_data();
+	o1.area();
+	o1.display();
+}
