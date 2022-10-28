@@ -1,0 +1,24 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+    int n,d=0,num,t,arm=0,n2;
+    cout<<"Enter the number: ";
+    cin>>n;
+    num=n2=n;
+    while(n>0)
+{
+    n=n/10;
+    d++;
+}
+    while(num>0){
+       t=num%10;
+       arm=arm+pow(t,d);
+       num=num/10;
+    }
+    if(arm==n2){
+        cout<<"Given number is armstrong";
+    }
+    else{cout<<"Given number is not armstrong";}
+}
