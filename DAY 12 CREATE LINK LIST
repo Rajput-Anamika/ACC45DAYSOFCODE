@@ -1,0 +1,51 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+class a
+{
+	public:
+	struct node{
+		int data;
+		struct node *next;
+	};
+	struct node *start=NULL;
+	void create()
+	{
+		struct node *ptr, *temp; int n;
+		ptr=(struct node *) malloc(sizeof(struct node));
+		cout<<"enter value:";
+		cin>>n;
+		ptr->data=n;
+		ptr->next=NULL;
+		if(start==NULL){
+			start=ptr;
+		}
+		else{
+			temp=start;
+			while(temp->next!=NULL)
+			{
+				temp=temp->next;
+			}
+			temp->next=ptr;
+		}}
+    void display()
+		{
+			struct node *temp;
+			if(start==NULL){
+				cout<<"List is empty\n";
+			}
+			else{
+				temp=start;
+				while(temp!=NULL){
+					cout<<temp->data;
+					temp=temp->next;
+				}
+			}
+		}
+};
+		int main()
+		{
+		    a o1;
+		    o1.create();
+		    o1.display();
+		}
