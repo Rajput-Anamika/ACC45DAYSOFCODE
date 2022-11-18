@@ -1,0 +1,121 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int armstrong()
+{
+    int n,d=0,num,t,arm=0,n2;
+    cout<<"Enter the number: ";
+    cin>>n;
+    num=n2=n;
+    while(n>0)
+{
+    n=n/10;
+    d++;
+}
+    while(num>0){
+       t=num%10;
+       arm=arm+pow(t,d);
+       num=num/10;
+    }
+    if(arm==n2){
+        cout<<"Given number is armstrong"<<endl;
+    }
+    else{cout<<"Given number is not armstrong"<<endl;}
+} 
+int palindrome()  
+{  
+  int n,r,sum=0,temp;    
+  cout<<"Enter the Number=";    
+  cin>>n;    
+ temp=n;    
+ while(n>0)    
+{    
+ r=n%10;    
+ sum=(sum*10)+r;    
+ n=n/10;    
+}    
+if(temp==sum)    
+cout<<"Number is Palindrome"<<endl;    
+else    
+cout<<"Number is not Palindrome"<<endl;   
+  return 0;  
+}  
+int leapyear() {
+  int year;
+  cout << "Enter a year: ";
+  cin >> year;
+  if (year % 400 == 0) {
+    cout << year << " is a leap year"<<endl;
+  }
+  else if (year % 100 == 0) {
+    cout << year << " is not a leap year"<<endl;
+  }
+  else if (year % 4 == 0) {
+    cout << year << " is a leap year"<<endl;
+  }
+  else {
+    cout << year << " is not a leap year"<<endl;
+  }
+  return 0;
+}
+int fibannaci(int n)
+{
+	int f=0;
+	   int t1=0;
+	    int t2=1;
+	    cout<<t1<<endl<<t2<<endl;
+	while(f<n){
+	    f=t1+t2;
+	    if(f<=n){
+		cout<<f<<endl;}
+		t1=t2;
+		t2=f;
+}}
+int swap(int x,int y)
+{
+	cout<<"x="<<x<<endl;
+	cout<<"y="<<y<<endl;
+	x=x+y;
+	y=x-y;
+	x=x-y;
+	cout<<"After swaping"<<endl;
+	cout<<"x="<<x<<endl;
+	cout<<"y="<<y<<endl;
+	}
+int main(){
+	int num,n,a,b;
+     while(1){
+     cout << "\n1.ARMSTRONG\n";
+     cout<<"2.PALINDROME\n";
+     cout<<"3.LEAP YEAR\n";
+     cout<<"4.FIBANNACI\n";
+     cout<<"5.SWAP\n";
+     cout<<"6.EXIT\n";
+    
+    cout << "Enter a number ";
+    cin >> num;
+    switch (num) {
+        case 1:
+            armstrong();
+            break;
+        case 2:
+            palindrome();
+            break;
+        case 3:
+            leapyear();
+            break;
+        case 4:
+		    cout<<"Enter the range of fibbonaci series:"<<endl;
+            cin>>n;
+            fibannaci(n);
+            break;
+         case 5:
+         	cout<<"Enter two numbers to be swaped:"<<endl;
+         	cin>>a>>b;
+            swap(a,b);
+            break;
+         case 6:
+            exit(0);
+            break;
+     }}
+}
