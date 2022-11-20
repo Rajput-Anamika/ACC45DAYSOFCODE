@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+// Return type of function is void because value is not returned.
+void add()
+{
+    int a, b, c;
+    cout<<"Enter two numbers for addition: ";
+    cin>>a;
+    cin>>b;
+    c=a+b;
+    cout<<c<<endl;
+}
+// Return type of function is int
+int sub()
+{
+    int a,b,c;
+    cout<<"Enter two number for subtraction: ";
+    cin>>a>>b;
+    c=a-b;
+    return c;
+}
+// There is no return value to calling function. Hence, return type of function is void
+void mul(int a, int b)
+{
+    int c;
+    c=a*b;
+    cout<<c<<endl;
+    }
+/* This function returns integer value.  */
+int div(int a, int b)
+{
+    int c;
+    c=a/b;
+    return c;
+}    
+void add();
+int sub();
+int main(){
+	int n1, n2, n3, n4, n5, n6;
+	add();
+	n1=sub();
+	cout<<n1<<endl;
+	cout<<"Enter two numbers for multiplication: ";
+	cin>>n2>>n3;
+	mul(n2, n3);
+	cout<<"Enter two numbers for division: ";
+	cin>>n4>>n5;
+	n6=div(n4, n5);
+	cout<<n6;
+}
