@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+void toh(int n, char A, char B, char C){
+	if(n<=0){
+		cout<<"Invalid value";
+	}
+	else if(n==1){
+		cout<<A<<"->"<<B<<endl;
+	}
+	else {
+		toh(n-1,A,C,B);
+		toh(1,A,B,C);
+		toh(n-1,B,A,C);
+	}
+}
+int main(){
+	int n;
+	char A,B,C;
+	cin>>n>>A>>B>>C;
+	toh(n,'A','B','C');
+}
