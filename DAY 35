@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+class complex{
+	private:
+		int a, b;
+		public:
+			void setdata(int x, int y){
+				a=x;
+				b=y;
+			}
+			friend void fun(complex);
+};
+void fun(complex c){
+	cout<<"Friend\nSum: "<<c.a+c.b<<endl;
+}
+inline void display(int a){
+	cout<<"inline\n"<<a;
+}
+int main(){
+	complex c1;
+	c1.setdata(2,4);
+	fun(c1);
+	display(2);
+	return 0;
+}
