@@ -1,0 +1,20 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int u,v,a,s,vel;
+	    cin>>u>>v>>a>>s;
+	    vel=u*u-2*a*s;
+	    if(vel<=v*v){
+	        cout<<"Yes\n";
+	    }
+	    else{
+	        cout<<"No\n";
+	    }
+	}
+	return 0;
+}
