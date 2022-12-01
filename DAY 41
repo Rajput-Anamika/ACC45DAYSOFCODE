@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int w1,w2,x1,x2,m;
+	    cin>>w1>>w2>>x1>>x2>>m;
+	    int min=m*x1;
+        int max=m*x2;
+        if(min<=w2-w1 && w2-w1<=max)
+            cout<<"1"<<endl;
+        else
+            cout<<"0"<<endl;
+	}
+	return 0;
+}
